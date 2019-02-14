@@ -14,6 +14,7 @@ class SocialMediaAccount < ApplicationRecord
   SOCIAL_NETWORKS = %w(facebook twitter)
 
   belongs_to :person
+  has_many :posts
 
   validates :kind, presence: true, uniqueness: { scope: :person_id }
   validates :kind, inclusion: { in: SOCIAL_NETWORKS }
