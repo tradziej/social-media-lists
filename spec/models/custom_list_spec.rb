@@ -10,5 +10,6 @@ RSpec.describe CustomList, type: :model do
   describe 'associations' do
     it { is_expected.to have_many(:clients_custom_lists) }
     it { is_expected.to have_many(:clients) }
+    it { is_expected.to have_and_belong_to_many(:people) }
   end
 end
