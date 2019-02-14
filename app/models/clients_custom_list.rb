@@ -1,0 +1,2 @@
+class ClientsCustomList < ApplicationRecord
+end
