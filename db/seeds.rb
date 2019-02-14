@@ -6,3 +6,7 @@
     twitter_username: Faker::Internet.username
   )
 end
+
+1000.times do
+  Client.create(name: Faker::Company.name)
+end
