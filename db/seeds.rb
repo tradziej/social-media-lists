@@ -15,7 +15,8 @@ custom_lists = [
   "Important industry figures",
   "List of state governors",
   "Members of a federal agency",
-  "Custom list created by internal team"
+  "Custom list created by internal team",
+  "Federal legislators"
 ]
 custom_lists.each{ |name| CustomList.create(name: name) }
 
