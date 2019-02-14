@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: social_media_accounts
+#
+#  id         :bigint(8)        not null, primary key
+#  kind       :string
+#  username   :string
+#  person_id  :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 require 'rails_helper'
 
 RSpec.describe SocialMediaAccount, type: :model do
