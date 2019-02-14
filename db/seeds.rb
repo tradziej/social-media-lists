@@ -18,3 +18,10 @@ custom_lists = [
   "Custom list created by internal team"
 ]
 custom_lists.each{ |name| CustomList.create(name: name) }
+
+2000.times do
+  Person.create(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name
+  )
+end
