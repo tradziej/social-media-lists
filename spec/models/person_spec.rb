@@ -22,5 +22,6 @@ RSpec.describe Person, type: :model do
 
   describe 'associations' do
     it { is_expected.to have_many(:posts) }
+    it { is_expected.to have_many(:social_media_accounts) }
   end
 end

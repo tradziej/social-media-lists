@@ -12,6 +12,7 @@
 class Person < ApplicationRecord
   has_and_belongs_to_many :custom_lists
   has_many :posts
+  has_many :social_media_accounts
   
   validates :first_name, presence: true
   validates :last_name, presence: true
