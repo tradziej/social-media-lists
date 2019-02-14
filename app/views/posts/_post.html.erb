@@ -1,0 +1,9 @@
+<div class="social-media-post">
+  <span>Author: <%= post.person.full_name %></span>
+  <span>Date: <%= post.posted_at %></span>
+  <p><%= post.content %></p>
+  <p>
+    <a target="_blank" rel="noopener noreferrer" href="<%= post.url %>">source</a>
+    (<%= post.social_media_account.kind %>)
+  </p>
+</div>
