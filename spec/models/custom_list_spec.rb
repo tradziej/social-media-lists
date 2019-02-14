@@ -6,4 +6,9 @@ RSpec.describe CustomList, type: :model do
   describe 'validations' do
     it { is_expected.to validate_presence_of(:name) }
   end
+
+  describe 'associations' do
+    it { is_expected.to have_many(:clients_custom_lists) }
+    it { is_expected.to have_many(:clients) }
+  end
 end
