@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all.limit(100)
+    @posts = Post.all.page params[:page]
   end
 end
