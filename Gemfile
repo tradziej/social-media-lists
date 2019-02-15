@@ -44,6 +44,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.8'
   gem 'pry-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -60,6 +61,7 @@ end
 group :test do
   gem 'shoulda-matchers', '4.0.0.rc1'
   gem 'rails-controller-testing' # Needed when using Rails 5.x
+  gem 'capybara'
 end
 
 
