@@ -1,3 +1,16 @@
+<%= form_tag "", :method => :get do %>
+  <p>Custom lists: <%= select_tag "custom_lists",
+    options_for_select(CustomList.distinct.pluck(:name), params[:custom_lists]),
+    multiple: true %></p>
+  <p>Social media: <%= select_tag "social_accounts",
+    options_for_select(["facebook", "twitter"], params[:social_accounts]),
+    multiple: true %></p>
+  <p>From: <%= select_date 3.months.ago, prefix: :from_date %></p>
+  <p>To: <%= select_date Date.today, prefix: :to_date %></p>
+  <%= submit_tag 'Filter' %>
+<% end %>
+<%= button_to "Reset", root_path, method: :get %>
+
 <h1>Posts</h1>
 
 <% @posts.each do |post| %>
